@@ -1,0 +1,13 @@
+{
+  "name": "precursor-grid",
+  "version": "1.0.0",
+  "ignore": [
+    ".gitignore",
+    ".gitattributes",
+    ".bower.json",
+    "bower.json"
+  ],
+  "keywords": [
+    "precursor"
+  ]
+}

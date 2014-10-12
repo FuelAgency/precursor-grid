@@ -1,0 +1,16 @@
+{
+  "name": "precursor-grid",
+  "version": "1.0.0",
+  "homepage": "https://github.com/fuelagency/precursor-grid",
+  "ignore": [
+    ".gitignore",
+    ".gitattributes",
+    ".bower.json",
+    "bower.json"
+  ],
+  "_release": "1.0.0",
+  "_source": "git://github.com/fuelaency/precursor-grid.git",
+  "_target": "~1.0.0",
+  "_originalSource": "precursor-hide",
+  "_direct": true
+}
