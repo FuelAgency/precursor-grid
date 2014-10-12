@@ -1,0 +1,145 @@
+{
+  	"id": "grid",
+	"name": "Grid",
+	"expandable": false,
+	"is_setting": true,
+	"is_hidden": false,
+	"priority": 5,
+    "version": "1.0",
+    "is_custom": false,
+	"details": {
+	    "description": "This grid module gives you the ability to build a responsive site. It uses the default media query settings, found in 'Settings'. Define the settings for your site grid here. Some of these settings may not work, as they're deprecated since and older version of Precursor."
+	},
+	"fields": [
+	    {
+	        "name": "isResponsive",
+	        "value": true,
+	        "meta": "bool"
+	    },
+	    {
+	        "name": "mobileOverride",
+	        "value": true,
+	        "meta": "bool"
+	    },
+	    {
+	        "name": "tabletResponsive",
+	        "value": true,
+	        "meta": "bool"
+	    },
+	    {
+	        "name": "desktopResponsive",
+	        "value": true,
+	        "meta": "bool"
+	    },
+	    {
+	        "name": "siteWidth",
+	        "value": "100%",
+	        "meta": "string"
+	    },
+	    {
+	        "name": "tabletWidth",
+	        "value": "100%",
+	        "meta": "string"
+	    },
+	    {
+	        "name": "mobileWidth",
+	        "value": "100%",
+	        "meta": "string"
+	    },
+	    {
+	        "name": "siteAlign",
+	        "value": "left",
+	        "meta": "string"
+	    },
+	    {
+	        "name": "siteGutter",
+	        "value": "0%",
+	        "meta": "string"
+	    },
+	    {
+	        "name": "rowGutter",
+	        "value": "0%",
+	        "meta": "string"
+	    },
+	    {
+	        "name": "mobileNestOverride",
+	        "value": true,
+	        "meta": "bool"
+	    },
+	    {
+            "name": "precursorCSSScope",
+            "value": "~\"precursor\"",
+            "meta": "string"
+        },
+        {
+            "name": "blockCSSScope",
+            "value": "~\"col\"",
+            "meta": "string"
+        },
+        {
+            "name": "offsetCSSScope",
+            "value": "~\"off\"",
+            "meta": "string"
+        },
+        {
+            "name": "rowCSSScope",
+            "value": "~\"row\"",
+            "meta": "string"
+        },
+        {
+            "name": "blockContainerCSSScope",
+            "value": "~\"col-container\"",
+            "meta": "string"
+        },
+        {
+            "name": "blockPrefixCSSScope",
+            "value": "~\"col\"",
+            "meta": "string"
+        },
+        {
+            "name": "blockLeftCSSScope",
+            "value": "~\"col-left\"",
+            "meta": "string"
+        },
+        {
+            "name": "blockRightCSSScope",
+            "value": "~\"col-right\"",
+            "meta": "string"
+        },
+        {
+            "name": "blockHeight",
+            "value": "~\"col-height\"",
+            "meta": "string"
+        },
+        {
+            "name": "pre-mobile",
+            "value": "~\"-mob\"",
+            "meta": "string"
+        },
+        {
+            "name": "pre-mobile-portrait",
+            "value": "~\"-mob-p\"",
+            "meta": "string"
+        },
+        {
+            "name": "pre-tablet",
+            "value": "~\"-tab\"",
+            "meta": "string"
+        },
+        {
+            "name": "pre-tablet-portrait",
+            "value": "~\"-tab-p\"",
+            "meta": "string"
+        },
+        {
+            "name": "pre-desktop",
+            "value": "~\"-des\"",
+            "meta": "string"
+        },
+        {
+            "name": "pre-default",
+            "value": "~\"\"",
+            "meta": "string"
+        }
+	]
+}

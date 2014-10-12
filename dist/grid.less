@@ -1,0 +1,195 @@
+//  ==========================================================================
+//  .-. .-. .-. .-. . . .-. .-. .-. .-.
+//  |-' |(  |-  |   | | |(  `-. | | |( 
+//  '   ' ' `-' `-' `-' ' ' `-' `-' ' '
+//                              by Fuel
+//  ==========================================================================
+
+//  Global settings
+    @import "../../mixins/includes";
+
+
+// @Param: {String, Callback, Int, Int, Int}
+// Returns: Classname with an index prefixed asdfasdf
+.classWithIndex(@class, @size, @callback, @min:1, @max:12, @s:1, @indexOverride:false){
+    .loop(@i) when(@i =< @max) {
+        .@{class}@{size}-@{i}{
+            .return(@i, @max, @class, @callback); 
+        }
+        .loop(@i + @s);
+    }
+    .loop(@min);
+
+    // Callback
+    .return(@i, @max, @class, @callback){
+        .get(@c) when (@c = @blockCSSScope){
+            .getOverride(@ov) when (@ov = true){
+                width:100% - (2*@siteGutter);
+            }
+            .getOverride(@ov) when (@ov = false){
+                width:((100%/@max)*@i)-2*@siteGutter;   
+            }
+            .getOverride(@indexOverride);
+        }
+        .get(@c) when (@c = @offsetCSSScope){
+            .getOverride(@ov) when (@ov = true){
+                &.@{blockPrefixCSSScope} {
+                    margin-left:@siteGutter;
+                }
+            }
+            .getOverride(@ov) when (@ov = false){
+                &.@{blockPrefixCSSScope} {
+                    margin-left:((100%/@max)*@i)+@siteGutter;
+                } 
+            }
+            .getOverride(@indexOverride);
+        }
+        // CALLBACK
+        .get(@callback); 
+    }
+}
+
+// @Param: {String, Int, String}
+// Returns: Block element  
+.createEl(@class, @width:0){
+    .get(@c) when (@c = container){
+        width:@width - (2*@siteGutter);
+    }
+    .get(@c) when (@c = containerPos){
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .get(@c) when (@c = @blockCSSScope){
+        .@{blockPrefixCSSScope} {
+            margin-left:@siteGutter;
+            margin-right:@siteGutter;
+            *margin-left:(@siteGutter - 0.05);
+            *margin-right:(@siteGutter - 0.05);
+        }
+    }
+    // CALLBACK
+    .@{blockContainerCSSScope} {
+        .get(@class);
+    }
+}
+
+.getMobileOverride(@ov) when (@ov = true){
+    .@{blockContainerCSSScope}{
+        float:none;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+.createGridEl(@el, @width:0, @pre-size, @indOv:false){
+    .createEl(@el, @width);
+    .classWithIndex(@blockCSSScope, @pre-size, @blockCSSScope, 1, 12, 1, @indOv);
+    .classWithIndex(@offsetCSSScope, @pre-size, @offsetCSSScope, 1, 12, 1, @indOv);
+}
+
+// Generate break-points
+.responsive(@a) when (@a = false) {
+    .createGridEl(container, @siteWidth, @pre-desktop);
+}
+.responsive(@a) when (@a = true){
+    .mobile(@a) when (@a = false) {
+        @media @SmartphonesPortraitAndLandscape{
+            .createGridEl(container, 100%, @pre-mobile);
+        }
+        @media @SmartphonesLandscape{
+            .createGridEl(container, 100%, @pre-mobile);
+        }
+        @media @SmartphonesPortrait{
+            .createGridEl(container, 100%, @pre-mobile-portrait);
+        }
+    }
+    .mobile(@a) when (@a = true){
+        @media @SmartphonesPortraitAndLandscape{
+            .createGridEl(container, @mobileWidth, @pre-default, true);
+            .createGridEl(container, 100%, @pre-mobile);
+            .getMobileOverride(@mobileNestOverride);
+        }
+        @media @SmartphonesLandscape{
+            .createGridEl(container, @mobileWidth, @pre-default, true);
+            .createGridEl(container, 100%, @pre-mobile);
+            .getMobileOverride(@mobileNestOverride);
+        }
+        @media @SmartphonesPortrait{
+            .createGridEl(container, @mobileWidth, @pre-default, true);
+            .createGridEl(container, 100%, @pre-mobile-portrait);
+            .getMobileOverride(@mobileNestOverride);
+        }
+    }
+    .mobile(@mobileOverride);
+
+    .tablet(@a:false) when (@a = true){
+        @media @iPadPortraitAndLandscape{
+            .createGridEl(container, @tabletWidth, @pre-tablet);
+        }
+        @media @iPadLandscape{
+            .createGridEl(container, @tabletWidth, @pre-tablet);
+        }
+        @media @iPadPortrait{
+            .createGridEl(container, @tabletWidth, @pre-tablet-portrait);
+        }
+    }
+    .tablet(@tabletResponsive);
+
+    .desktop(@a:false) when (@a = true){
+        @media @DesktopAndLaptop{
+            .createGridEl(container, @siteWidth, @pre-desktop);
+        }
+    }
+    .desktop(@desktopResponsive);
+}
+
+.addIcing(){
+
+    .@{rowCSSScope}{
+        width:100% - (2 * @rowGutter);
+        margin-left:auto;
+        margin-right:auto;
+
+        .@{blockLeftCSSScope}{
+            margin-left:0;
+        }
+        .@{blockRightCSSScope}{
+            margin-right:0;
+            float:right;
+        }
+    }
+    .@{blockCSSScope}{
+        float:left;
+    }
+    .@{rowCSSScope} {
+        *zoom: 1;
+
+        &:before,
+        &:after{
+            display: table;
+            content: "";
+            line-height: 0;
+        }
+        &:after{
+            clear: both;
+        }
+    }
+}
+
+.init(){
+    .@{precursorCSSScope}{
+
+        //  Build preCursor.
+        .createGridEl(@blockCSSScope, 0, @pre-default);
+
+        //  Container/Wrapper positioning
+        .createEl(containerPos, 0); 
+
+        //  Responsive
+        .responsive(@isResponsive);
+
+        //  Add icing
+        .addIcing();
+    }
+}
+.init();
