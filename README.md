@@ -14,32 +14,32 @@ This grid module gives you the ability to build a responsive site. It uses the d
 Add these two containers to your markup, otherwise the grid won't work. You can add as many elements after these wrappers as you like, just don't forget them.
 
 ```html
-    &lt;div class=&quot;precursor&quot;&gt;
-        &lt;div class=&quot;col-container&quot;&gt;
+    <div class="precursor">
+        <div class="col-container">
             Rows go in here
-        &lt;/div&gt;
-    &lt;/div&gt;
+        </div>
+    </div>
 ```
 
 ### Rows
 Anytime you need a set of columns, they require wrapping inside a 'row'. The row markup clears any floating columns inside them. Like most other grid based CSS frameworks, columns must add up to '12'.
 
 ```html
-    &lt;div class=&quot;row&quot;&gt;
+    <div class="row">
         Columns go in here
-    &lt;/div&gt;
+    </div>
 ```
 
 ### Columns
 Columns require two classes in order to work. The 'col' class add all of the floating properties, while the 'col-n' class adjusts the width. You can combine blocks of different sizes into your rows, as long as they add up to 12. The larger the number in 'col-n', the wider the column.
 
 ```html
-    &lt;div class=&quot;col col-6&quot;&gt;
+    <div class="col col-6">
       Content goes in here
-    &lt;/div&gt;
-    &lt;div class=&quot;col col-6&quot;&gt;
+    </div>
+    <div class="col col-6">
       Content goes in here
-    &lt;/div&gt;
+    </div>
 ```
 
 ## Files
