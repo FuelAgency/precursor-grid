@@ -7,6 +7,7 @@
 	"priority": 5,
     "version": "1.0",
     "is_custom": false,
+    "is_editable": true,
 	"details": {
 	    "description": "This grid module gives you the ability to build a responsive site. It uses the default media query settings, found in 'Settings'. Define the settings for your site grid here. Some of these settings may not work, as they're deprecated since and older version of Precursor."
 	},
@@ -68,78 +69,78 @@
 	    },
 	    {
             "name": "precursorCSSScope",
-            "value": "~\"precursor\"",
-            "meta": "string"
+            "value": "precursor",
+            "meta": "multistring"
         },
         {
             "name": "blockCSSScope",
-            "value": "~\"col\"",
-            "meta": "string"
+            "value": "col",
+            "meta": "multistring"
         },
         {
             "name": "offsetCSSScope",
-            "value": "~\"off\"",
-            "meta": "string"
+            "value": "off",
+            "meta": "multistring"
         },
         {
             "name": "rowCSSScope",
-            "value": "~\"row\"",
-            "meta": "string"
+            "value": "row",
+            "meta": "multistring"
         },
         {
             "name": "blockContainerCSSScope",
-            "value": "~\"col-container\"",
-            "meta": "string"
+            "value": "col-container",
+            "meta": "multistring"
         },
         {
             "name": "blockPrefixCSSScope",
-            "value": "~\"col\"",
-            "meta": "string"
+            "value": "col",
+            "meta": "multistring"
         },
         {
             "name": "blockLeftCSSScope",
-            "value": "~\"col-left\"",
-            "meta": "string"
+            "value": "col-left",
+            "meta": "multistring"
         },
         {
             "name": "blockRightCSSScope",
-            "value": "~\"col-right\"",
-            "meta": "string"
+            "value": "col-right",
+            "meta": "multistring"
         },
         {
             "name": "blockHeight",
-            "value": "~\"col-height\"",
-            "meta": "string"
+            "value": "col-height",
+            "meta": "multistring"
         },
         {
             "name": "pre-mobile",
-            "value": "~\"-mob\"",
-            "meta": "string"
+            "value": "-mob",
+            "meta": "multistring"
         },
         {
             "name": "pre-mobile-portrait",
-            "value": "~\"-mob-p\"",
-            "meta": "string"
+            "value": "-mob-p",
+            "meta": "multistring"
         },
         {
             "name": "pre-tablet",
-            "value": "~\"-tab\"",
-            "meta": "string"
+            "value": "-tab",
+            "meta": "multistring"
         },
         {
             "name": "pre-tablet-portrait",
-            "value": "~\"-tab-p\"",
-            "meta": "string"
+            "value": "-tab-p",
+            "meta": "multistring"
         },
         {
             "name": "pre-desktop",
-            "value": "~\"-des\"",
-            "meta": "string"
+            "value": "-des",
+            "meta": "multistring"
         },
         {
             "name": "pre-default",
-            "value": "~\"\"",
-            "meta": "string"
+            "value": "",
+            "meta": "multistring"
         }
 	]
 }
