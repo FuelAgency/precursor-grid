@@ -1,10 +1,6 @@
 {
   	"id": "grid",
 	"name": "Grid",
-	"expandable": false,
-	"is_setting": true,
-	"is_hidden": false,
-	"priority": 5,
     "version": "1.0",
     "is_custom": false,
     "is_editable": true,
