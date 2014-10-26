@@ -7,10 +7,12 @@
   ],
   "main": [
     "grid.less",
-    "grid.css",
+    "grid.css"
   ],
   "keywords": [
-    "precursor"
+    "precursor",
+    "grid",
+    "fuel"
   ],
   "is_editable": true
 }
