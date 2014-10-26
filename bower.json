@@ -1,11 +1,17 @@
 {
   "name": "precursor-grid",
   "version": "1.0.0",
+  "main": [
+    "dist/grid.less",
+    "jquery.bxslider.css",
+    "images/bx_loader.gif",
+    "images/controls.png"
+  ],
   "ignore": [
+    "**/.*",
     ".gitignore",
     ".gitattributes",
-    ".bower.json",
-    "bower.json"
+    "*.md"
   ],
   "keywords": [
     "precursor"
