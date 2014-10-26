@@ -2,11 +2,9 @@
   "name": "precursor-grid",
   "version": "1.0.1",
   "main": [
-    "grid.less",
-    "grid.css"
+    "grid.less"
   ],
   "ignore": [
-    "**/.*",
     ".gitignore",
     ".gitattributes"
   ],
