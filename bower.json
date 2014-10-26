@@ -2,10 +2,7 @@
   "name": "precursor-grid",
   "version": "1.0.0",
   "main": [
-    "dist/grid.less",
-    "jquery.bxslider.css",
-    "images/bx_loader.gif",
-    "images/controls.png"
+    "dist/grid.less"
   ],
   "ignore": [
     "**/.*",
