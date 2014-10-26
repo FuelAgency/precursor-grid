@@ -1,17 +1,16 @@
 {
   "name": "precursor-grid",
   "version": "1.0.1",
-  "main": [
-    "grid.less"
-  ],
   "ignore": [
     ".gitignore",
     ".gitattributes"
   ],
+  "main": [
+    "grid.less",
+    "grid.css",
+  ],
   "keywords": [
-    "precursor",
-    "grid",
-    "responsive"
+    "precursor"
   ],
   "is_editable": true
 }
