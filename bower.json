@@ -1,15 +1,14 @@
 {
   "name": "precursor-grid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": [
-    "dist/grid.less",
-    "dist/grid.css"
+    "grid.less",
+    "grid.css"
   ],
   "ignore": [
     "**/.*",
     ".gitignore",
-    ".gitattributes",
-    "*.md"
+    ".gitattributes"
   ],
   "keywords": [
     "precursor",
