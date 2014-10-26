@@ -1,9 +1,7 @@
 {
   "name": "precursor-grid",
-  "version": "1.0.0",
-  "main": [
-    "dist/grid.less"
-  ],
+  "version": "1.0.1",
+  "main": "dist/grid.less",
   "ignore": [
     "**/.*",
     ".gitignore",
