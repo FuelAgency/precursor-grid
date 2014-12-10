@@ -14,5 +14,6 @@
     "grid",
     "fuel"
   ],
-  "is_editable": true
+  "is_editable": true,
+  "linked_file": "grid.less"
 }
