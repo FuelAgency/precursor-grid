@@ -1,6 +1,6 @@
 {
   "name": "precursor-grid",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "ignore": [
     ".gitignore",
     ".gitattributes"
@@ -15,5 +15,5 @@
     "fuel"
   ],
   "is_editable": true,
-  "linked_file": "grid.less"
+  "linked_file": "grid.less" 
 }
